@@ -13,13 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/txtDate"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:gravity="center"/>
     <ListView
         android:id="@+id/listView01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#A0D9E2"
         >
-
     </ListView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnend"
+        android:text="종료"
+        android:layout_gravity="center"
+        />
 </LinearLayout>

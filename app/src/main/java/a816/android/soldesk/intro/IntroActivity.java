@@ -15,8 +15,7 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         // 1.TimerTask
-        // TimerTask 와 Timer 클래스를 이용해서
-        // 안드로이드 첫 화면 (Intro)를 구현할 수 있다.
+        // TimerTask 와 Timer 클래스를 이용해서 안드로이드 첫 화면 (Intro)를 구현
         TimerTask task = new TimerTask() {
 
             @Override
@@ -28,7 +27,7 @@ public class IntroActivity extends AppCompatActivity {
 
         // 2. Timer
         Timer timer = new Timer();
-        timer.schedule(task, 4000); // 3초뒤에
+        timer.schedule(task, 4000); //4초뒤에
     }
 }
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textColor="#353535"
-    android:textSize="8pt">
-</TextView>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textTitle02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D5D5D5"
+        android:textColor="#353535"
+        android:textSize="8pt">
+    </TextView>

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="a816.android.soldesk.intro">
     <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +18,7 @@
 
         <activity
             android:name=".Content"
-            android:label="Content Test~!"/>
+            android:label="뉴스기사"/>
 
         <activity
             android:name=".NewsList"
@@ -28,6 +27,8 @@
         <activity
             android:name=".main"
             android:label="기사목록"/>
+
+
     </application>
 
 </manifest>
