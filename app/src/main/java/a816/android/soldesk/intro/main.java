@@ -22,13 +22,10 @@ public class main extends ListActivity implements AdapterView.OnItemClickListene
     //뉴스의 pubdate 가져오기
     // Vector<String> pubvec = new Vector<String>();
 
-    //뉴스의 descrition을 저장하기 위한 객체 선언
-    Vector<String> descvec = new Vector<String>();
-
     Vector<String> linkvec = new Vector<String>();
 
     // 뉴스의 데이터들을 뽑아 오는 클래스 선언
-    NewsContent newscontent = new NewsContent();
+    NewsContent newscontent;
 
     ListView listView02;
     WebView webview;
@@ -38,6 +35,10 @@ public class main extends ListActivity implements AdapterView.OnItemClickListene
         super.onCreate(savedInstanceState);
 
         webview = (WebView) findViewById(R.id.webView01);
+
+        Intent intent = getIntent();
+        String uri = intent.getStringExtra("uri");
+        newscontent = new NewsContent(uri);
 
         //doInBackground 메소드를 호출
         newscontent.execute(null, null, null);
@@ -49,7 +50,6 @@ public class main extends ListActivity implements AdapterView.OnItemClickListene
                     titlevec = newscontent.titlevec;
                     linkvec = newscontent.linkvec;
                     //pubvec = newscontent.pubvec;
-                    descvec = newscontent.descvec;
                     break;
                 }
             } catch (Exception e) {

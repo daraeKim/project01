@@ -22,6 +22,7 @@ public class IntroActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(getApplicationContext(), NewsList.class);
                 startActivity(intent);
+                android.os.Process.killProcess(android.os.Process.myPid());
             }
         };
 

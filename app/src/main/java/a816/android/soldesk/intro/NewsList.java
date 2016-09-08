@@ -3,7 +3,6 @@ package a816.android.soldesk.intro;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -50,32 +49,48 @@ public class NewsList extends AppCompatActivity {
         // 뉴스카테고리 리스트뷰에 붙이기
         final String[] data = {"Today's News", "Politics News", "Economy News",
                 "Inter-Korea News", "International News"};
+
         listView = (ListView) findViewById(R.id.listView01);
+
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, data);
         listView.setAdapter(adapter);
 
         // 카테고리 클릭시 이벤트 처리
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // Bundle 객체에 저장
                 Bundle bundle = new Bundle();
 
-                if (data[position] == "Today's News") {
-
+                if (position == 0) {
+                    String uri = "http://world.kbs.co.kr/rss/rss_news.htm?lang=e";
                     Intent intent = new Intent(getApplicationContext(), main.class);
+                    intent.putExtra("uri",uri);
                     startActivity(intent);
 
-                } else if (data[position] == "Politics News") {
+                } else if (position == 1) {
+                    String uri = "http://world.kbs.co.kr/rss/rss_news.htm?lang=e&id=Po";
+                    Intent intent = new Intent(getApplicationContext(), main.class);
+                    intent.putExtra("uri",uri);
+                    startActivity(intent);
 
-                } else if (data[position] == "Economy News") {
+                } else if (position == 2) {
+                    String uri = "http://world.kbs.co.kr/rss/rss_news.htm?lang=e&id=Ec";
+                    Intent intent = new Intent(getApplicationContext(), main.class);
+                    intent.putExtra("uri",uri);
+                    startActivity(intent);
 
-                } else if (data[position] == "Inter-Korea News") {
-
+                } else if (position == 3) {
+                    String uri = "http://world.kbs.co.kr/rss/rss_news.htm?lang=e&id=IK";
+                    Intent intent = new Intent(getApplicationContext(), main.class);
+                    intent.putExtra("uri",uri);
+                    startActivity(intent);
+                }else if (position == 4) {
+                    String uri = "http://world.kbs.co.kr/rss/rss_news.htm?lang=e&id=In\n";
+                    Intent intent = new Intent(getApplicationContext(), main.class);
+                    intent.putExtra("uri",uri);
+                    startActivity(intent);
                 }
-
-
             }
         });
     }
